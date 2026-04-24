@@ -29,8 +29,3 @@ The Furina 3D model was sourced from Sketchfab:
 All character illustrations and animated previews were sourced from the Genshin Impact Fandom Gallery:
 [Furina Gallery on Genshin Impact Wiki](https://genshin-impact.fandom.com/wiki/Furina/Gallery)
 
-## How to Run
-To view the website with all features (including the 3D model) functioning correctly, do not open the index.html file directly via the file system. Instead, use the provided local server script:
-1. Ensure Python is installed on your system.
-2. Run the "jalankan_web.bat" file.
-3. The website will automatically open at http://localhost:8000 in your default browser.
