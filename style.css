@@ -323,6 +323,70 @@ section {
     font-size: 1.1rem;
     color: #cbd5e1;
 }
+/* Mini Game Section */
+.minigame-section {
+    text-align: center;
+}
+
+.minigame-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.score-board h3 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--accent-color);
+    text-shadow: 0 2px 10px rgba(251, 191, 36, 0.3);
+}
+
+.furina-interactive {
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.furina-interactive img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    transition: transform 0.1s;
+}
+
+.furina-interactive img:active {
+    transform: scale(0.95);
+}
+
+.minigame-hint {
+    font-size: 1rem;
+    color: var(--primary-light);
+    opacity: 0.8;
+}
+
+/* Shake Animation */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shake-effect {
+    animation: shake 0.2s;
+    animation-iteration-count: infinite;
+}
 
 /* Footer */
 footer {

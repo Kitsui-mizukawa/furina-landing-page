@@ -102,4 +102,40 @@ document.addEventListener('DOMContentLoaded', () => {
             nav.style.boxShadow = 'none';
         }
     });
+    // 4. Furina Bonk Mini-game
+    const bonkImg = document.getElementById('furina-bonk-img');
+    const hitCountDisplay = document.getElementById('hit-count');
+    let hitCount = 0;
+    let bonkTimeout;
+
+    if (bonkImg && hitCountDisplay) {
+        bonkImg.addEventListener('mousedown', () => {
+            // Increment score
+            hitCount++;
+            hitCountDisplay.innerText = hitCount;
+
+            // Change image to bonk and add shake effect
+            bonkImg.src = 'assets/2d/bonk.png';
+            bonkImg.classList.add('shake-effect');
+
+            // Optional: trigger water ripple where clicked
+            try {
+                var $el = $('.water-ripple-container');
+                var offset = $(bonkImg).offset();
+                var x = offset.left + $(bonkImg).width() / 2;
+                var y = offset.top + $(bonkImg).height() / 2;
+                $el.ripples('drop', x, y, 30, 0.08);
+            } catch(e) {}
+
+            // Reset image and animation after short delay
+            clearTimeout(bonkTimeout);
+            bonkTimeout = setTimeout(() => {
+                bonkImg.src = 'assets/2d/laugh.png';
+                bonkImg.classList.remove('shake-effect');
+            }, 200); // 200ms delay for the bonk effect
+        });
+        
+        // Prevent default dragging behavior
+        bonkImg.addEventListener('dragstart', (e) => e.preventDefault());
+    }
 });
