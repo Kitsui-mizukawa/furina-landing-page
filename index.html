@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Furina de Fontaine - Regina of All Waters. A tribute to the Hydro Archon of Genshin Impact.">
+    <title>Furina de Fontaine | Hydro Archon</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Model Viewer for 3D -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <!-- Water Ripple & Particles Container -->
+    <div id="hero-background" class="water-ripple-container">
+        <div id="tsparticles"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="logo">
+            <img src="assets/2d/Furina_Icon.webp" alt="Furina Icon" class="nav-icon">
+            <span>Furina</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#showcase">Showcase</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Furina de Fontaine</h1>
+            <p class="hero-subtitle">Regina of All Waters, Kindreds, Peoples and Laws</p>
+            <a href="#gallery" class="btn-primary">Explore</a>
+        </div>
+        <div class="hero-3d">
+            <model-viewer src="assets/3d/genshin_impact_-_furina.glb" auto-rotate camera-controls shadow-intensity="1"
+                exposure="1.2" environment-image="legacy" class="furina-model">
+            </model-viewer>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <h2 class="section-title">The Regina's Splendor</h2>
+        <div class="gallery-grid">
+            <div class="gallery-card glass-panel">
+                <img src="assets/2d/Furina_Character_Card.webp" alt="Character Card">
+                <h3>Endless Solo of Solitude</h3>
+            </div>
+            <div class="gallery-card glass-panel">
+                <img src="assets/2d/Furina_Wish.webp" alt="Furina Wish Art">
+                <h3>Character Card</h3>
+            </div>
+            <div class="gallery-card glass-panel">
+                <img src="assets/2d/Seats_Sacred_and_Secular_Event_Card.webp" alt="Event Card">
+                <h3>Sacred and Secular</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Section (Video/Animated WebP) -->
+    <section id="showcase" class="showcase">
+        <h2 class="section-title">Divine Performances</h2>
+        <div class="showcase-container">
+            <div class="video-panel glass-panel">
+                <img src="assets/2d/Let_the_People_Rejoice.webp" alt="Let the People Rejoice" class="animated-preview">
+                <div class="panel-content">
+                    <h3>Let the People Rejoice</h3>
+                    <p>Furina's elemental burst, creating a stage of foam and dazzling lights.</p>
+                </div>
+            </div>
+            <div class="video-panel glass-panel reverse">
+                <img src="assets/2d/Soloist_Solicitation.webp" alt="Soloist's Solicitation" class="animated-preview">
+                <div class="panel-content">
+                    <h3>Soloist's Solicitation</h3>
+                    <p>Graceful strikes infused with the power of Pneuma and Ousia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Furina Tribute. Non-commercial fan project.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- jQuery required for ripples plugin -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+
+    <!-- tsParticles -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
